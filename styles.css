@@ -1,0 +1,449 @@
+/* VARIABLES GLOBALES Y RESET */
+:root {
+    --color-dark-bg: #0d0a13; /* Fondo muy oscuro, casi negro */
+    --color-primary-fungus: hsl(280, 59%, 64%); /* Púrpura oscuro místico */
+    --color-secondary-glow: #11a364; /* Verde neón fúngico (glow) */
+    --color-text-light: rgb(162, 185, 47);
+    --font-heading: 'Georgia', serif; /* Tipo de letra impactante */
+    --color-purple-accent: #8a2be2; /* Azul Violeta o Morado intenso */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    overflow-x: hidden; /* Previene barras de desplazamiento horizontales por efectos */
+}
+
+a {
+    color: var(--color-secondary-glow);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-text-light);
+    text-transform: uppercase;
+}
+
+/* ESTILOS DE BOTONES Y CTA */
+.btn-cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-primary-fungus);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-secondary-glow);
+    box-shadow: 0 0 10px rgba(17, 163, 100, 0.5); /* Sombra inicial sutil */
+}
+
+.glow-on-hover:hover {
+    background-color: var(--color-secondary-glow);
+    color: var(--color-dark-bg);
+    box-shadow: 0 0 20px var(--color-secondary-glow), 0 0 40px var(--color-secondary-glow);
+}
+
+.btn-doc {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: 1px solid var(--color-primary-fungus);
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.btn-doc:hover {
+    background-color: var(--color-primary-fungus);
+}
+
+
+/* SECCIÓN HERO - ALTO IMPACTO */
+.hero {
+    /* SECCIÓN HERO - ALTO IMPACTO */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* ---------------------------------------------------------------- */
+    /* *** CÓDIGO ACTUALIZADO CON TU IMAGEN *** */
+    /* Asegúrate de que la ruta 'fondo_grumble_magico.jpg' sea correcta */
+    background: url('imagen/bosque_magico_grumble.jpg') no-repeat center center/cover; 
+    
+    /* Activa el efecto Parallax: el fondo se mantiene fijo mientras el contenido se desliza */
+    background-attachment: fixed; 
+    
+    /* ---------------------------------------------------------------- */
+    
+    position: relative;
+     .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ajusta el valor '0.7' (70% de opacidad) para que sea más o menos oscuro.
+       Prueba con 0.6 o 0.8 si es necesario. */
+    background-color: rgba(0, 0, 0, 0.75); /* Negro con 75% de opacidad */
+    z-index: 1; /* Asegura que la capa oscura esté debajo del contenido pero encima de la imagen */
+}
+}
+.game-logo {
+    font-size: 5rem;
+    color: var(--color-secondary-accent);
+    /* ¡Añadimos DOBLE SOMBRA DE TEXTO! */
+    text-shadow: 0 0 10px var(--color-secondary-accent), 0 0 5px rgba(0, 0, 0, 1);
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    /* Sombra de texto nítida para contraste */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.description-hero {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    /* Sombra de texto nítida para contraste */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+
+/* ESTILOS GENERALES DE SECCIÓN */
+section {
+    padding: 100px 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: var(--color-secondary-glow);
+}
+
+
+/* 2. SECCIÓN FEATURES (GRID) */
+.features {
+    background-color: #171120;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.feature-card {
+    background-color: var(--color-dark-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--color-primary-fungus);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--color-secondary-glow);
+    margin-bottom: 15px;
+}
+
+.feature-context {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    color: var(--color-primary-fungus);
+    
+    
+}
+.lore-intro {
+    max-width: 800px;
+    /* Aumentamos el margen inferior (el último valor) para separar de la cuadrícula */
+    margin: 0 auto 60px auto; /* Aumentamos de 40px a 60px */
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+/* ---------------------------------------------------------------- */
+/* REGLAS REVISADAS PARA IMAGEN DE ICONO PERSONALIZADA (FORZANDO TAMAÑO) */
+/* ---------------------------------------------------------------- */
+/* AJUSTE PARA EL PÁRRAFO INTRODUCTORIO DEL LORE */
+
+.feature-icon-img {
+    /* **Ajusta estas dos propiedades si 60px es muy pequeño o muy grande** */
+    width: 60px !important;  /* **¡La clave es !important!** */
+    height: 60px !important; /* **¡La clave es !important!** */
+    
+    /* Para asegurar que no se estire si la proporción no es 1:1 */
+    object-fit: contain; 
+    
+    /* Centra la imagen y le da el mismo margen que a los iconos */
+    display: block !important; 
+    margin: 0 auto 15px auto !important; 
+    
+    /* Quita cualquier borde o sombra que pueda interferir */
+    border: none !important;
+}
+
+/* Opcional: Estilo de hover para consistencia */
+.feature-card:hover .feature-icon-img {
+    transform: scale(1.1); 
+    transition: transform 0.3s;
+}
+
+
+/* SECCIÓN THREAT/LORE (GRID) */
+/* AJUSTE CLAVE 1: Dar más espacio a cada tarjeta */
+
+.threat-grid {
+    display: grid;
+    /* En pantallas grandes (>= 900px), muestra 4 columnas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; /* Más espacio entre tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* ---------------------------------------------------------------- */
+/* ESTILO DE TARJETAS UNIFICADO: OSCURO / MORADO / Gótica */
+/* ---------------------------------------------------------------- */
+
+.threat-card, .feature-card {
+    /* Fondo Oscuro, tomado de tu código original para features */
+    background-color: #1a0f20; /* Color oscuro similar a #171120 */
+    
+    padding: 30px; /* Usamos el padding de 30px de tu código features */
+    border-radius: 10px;
+    
+    /* Borde Morado (del pedido anterior) */
+    border: 3px solid var(--color-purple-accent); 
+    
+    /* Sombra fuerte del estilo Oscuro/Místico */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7); 
+    
+    min-height: 320px; 
+    
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center; 
+}
+
+/* Efecto Hover Unificado (Fuerte y Oscuro) */
+.threat-card:hover, .feature-card:hover {
+    transform: translateY(-8px);
+    /* Sombra más intensa al pasar el ratón */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9); 
+}
+/* Y para la responsividad, ajustamos cuando la pantalla es más pequeña */
+@media (max-width: 900px) {
+    .threat-grid {
+        /* En pantallas medianas, solo 2 columnas */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+@media (max-width: 500px) {
+    .threat-grid {
+        /* En móviles, 1 columna */
+        grid-template-columns: 1fr; 
+    }
+}
+/* AJUSTE PARA LA CUADRÍCULA (Separa las tarjetas de lo que viene después) */
+.threat-grid {
+    /* ... (resto de estilos de grid) ... */
+    margin-bottom: 50px; /* Añadimos un margen inferior después de las 4 tarjetas */
+}
+
+/* AJUSTE CRUCIAL: Modificamos la cuadrícula de montaje de 3 columnas */
+
+.masticador-montage-grid {
+    display: grid;
+    /* Usaremos solo 3 columnas (1fr 1fr 1fr) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2px; /* Reducimos el gap para que haya más espacio para las imágenes */
+    height: 160px; /* **AUMENTAMOS la altura a 160px** para dar espacio al Ghost vertical */
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    /* Fondo para contrastar con imágenes si tienen transparencia */
+    background-color: #e0e0e0; 
+}
+
+.montage-img {
+    width: 100%;
+    height: 100%;
+    /* Mantiene la proporción sin recortar la imagen, pero ajustamos la alineación */
+    object-fit: contain; 
+    /* Centramos la imagen en su caja, útil para objetos alargados como el Ghost */
+    object-position: center; 
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+
+/* AJUSTE CLAVE 3: Asegurar que las otras imágenes no se recorten */
+.threat-img {
+    width: 100%;
+    height: 140px; /* Altura consistente con el Montaje */
+    /* Usamos 'contain' aquí también para que las imágenes de Grumble y Morgo no se recorten */
+    object-fit: contain; 
+    border-radius: 5px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    /* Fondo para contrastar con imágenes si tienen transparencia */
+    background-color: #e0e0e0; 
+    transition: opacity 0.3s, transform 0.3s;
+    
+}
+
+
+/* 4. SECCIÓN MULTIMEDIA */
+.multimedia {
+    background-color: var(--color-dark-bg);
+    text-align: center;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 450px; /* Tamaño estándar de video 16:9 */
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--color-primary-fungus);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.play-icon {
+    font-size: 4rem;
+    color: var(--color-secondary-glow);
+    text-shadow: 0 0 10px var(--color-secondary-glow);
+}
+
+.video-placeholder p {
+    margin-top: 10px;
+}
+
+
+/* 5. SECCIÓN CRÉDITOS Y FOOTER */
+.credits {
+    background-color: #171120;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+.credit-info, .credit-doc {
+    flex-basis: 45%;
+    text-align: left;
+}
+
+.credit-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.credit-info li {
+    padding: 5px 0;
+    color: var(--color-text-light);
+}
+
+.footer-cta {
+    font-size: 2rem;
+    margin-top: 40px;
+    color: var(--color-primary-fungus);
+}
+
+.footer-btn {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding: 20px 0;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(122, 62, 156, 0.3);
+    color: #666;
+}
+
+/* MEDIAS QUERIES PARA RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .game-logo {
+        font-size: 3rem;
+    }
+    .tagline {
+        font-size: 1.8rem;
+    }
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .credit-info, .credit-doc {
+        text-align: center;
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .credit-info ul {
+        padding-left: 0;
+    }
+}
+/* Estilos necesarios para hacer el video responsive */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 1000px; 
+    margin: 40px auto; 
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); 
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Aquí iría el CSS para el Scroll-Triggered (animaciones de entrada de secciones) */
+/* .scroll-trigger { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; } */
+/* .scroll-trigger.visible { opacity: 1; transform: translateY(0); } */

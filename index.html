@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRUMBLE - El último guardían del mana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="game-logo">GRUMBLE</h1>
+            <h2 class="tagline">El último guardían del mana</h2>
+            <p class="description-hero">
+                La flor de maná está en peligro. Un parásito oscuro corrompe el bosque y convierte a las criaturas en mutantes. Tú eres Grumble, el guardían ancestral. Usa tu magia y tus raíces para defender la flor antes de que el bosque muera.
+            </p>
+            
+            <a href="[ENLACE A LA DEMO JUGABLE]" class="btn-cta glow-on-hover" target="_blank">
+                <i class="fas fa-gamepad"></i> JUGAR AHORA (PC / WebGL)
+            </a>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <h3 class="section-title scroll-trigger">MECÁNICAS PRINCIPALES</h3>
+        
+        <div class="features-grid">
+            
+            <div class="feature-card scroll-trigger">
+                <img src="iconos/assets/UI_Icon_WaveProgress.png" alt="UI_Icon_WaveProgress" class="feature-icon-img">
+                <h4>CONTROL DE ATAQUE (COOLDOWN)</h4>
+                <p>El jugador controla el ataque de Grumble: toca o haz clic en un carril para lanzar un hechizo Mágico y neutralizar al enemigo. ¡Cuidado! Tienes un cooldown de 1 segundo que obliga a la estrategia.</p>
+            </div>
+
+            <div class="feature-card scroll-trigger">
+                <img src="iconos/assets/UI_Icon_ArcaneEssence_Counter.png" alt="UI_Icon_ArcaneEssence_Counter" class="feature-icon-img">
+                <h4>RECOLECCIÓN: HOJAS BRILLANTES</h4>
+                <p>La única moneda del juego. Cada enemigo eliminado otorga 1 Hoja Brillante. La gestión de este recurso es clave para la supervivencia.</p>
+            </div>
+
+            <div class="feature-card scroll-trigger">
+                <img src="iconos/assets/UI_Icon_Ability_Shield.png" alt="UI_Icon_Ability_Shield" class="feature-icon-img">
+                <h4>Colocación de defensa: El escudo</h4>
+                <p>Compra el escudo, al colocar el escudo, ubica el puntero en la superficie o camino (costo: 50 Hojas Brillantes) si estas ubicado correctamente se aparecera una imagen presvia del escudo de cristal. Una barrera que los enemigos deben destruir para seguir avanzando.</p>
+            </div>
+        </div>
+
+        <p class="feature-context scroll-trigger">
+            OBJETIVO: Sobrevivir a 4 oleadas fijas sin que la flor de maná pierda toda su vida.
+        </p>
+    </section>
+
+   <section class="threat" id="lore">
+    
+    <h3 class="section-title scroll-trigger">LORE: NARRATIVA BASE</h3>
+    
+    <h4 class="lore-subtitle scroll-trigger">
+        ¡Defiende el Corazón del Bosque y la Flor de Maná!
+    </h4>
+    
+    <p class="lore-intro scroll-trigger">
+        Grumble es un anciano nomo Musgoso, protector de la última arboleda mágica. El juego utiliza el modelo mental de Defensa y la necesidad intuitiva de proteger la base, que es la planta sagrada: La Flor de Maná.
+    </p>
+
+    <div class="threat-grid">
+        
+        <div class="threat-card scroll-trigger">
+            <img src="imagen/wizard.png" alt="Grumble, el gnomo musgoso" class="threat-img">
+            <h4>PROTAGONISTA: GRUMBLE</h4>
+            <p class="tooltip-text">El anciano gnomo que lucha lanzando hechizos para neutralizar y eliminar a los enemigos.</p>
+            <button class="btn-modal">Motivación: Salvar la Flor de Maná</button>
+        </div>
+
+        <div class="threat-card scroll-trigger">
+            <img src="iconos/assets/flordemana.png" alt="La Flor de Maná" class="threat-img">
+            <h4>OBJETIVO: LA FLOR DE MANÁ</h4>
+            <p class="tooltip-text">El corazón del bosque que crece justo detrás de Grumble. Su vida es la tuya.</p>
+            <button class="btn-modal">Sistema de Vida</button>
+        </div>
+        
+        <div class="threat-card scroll-trigger">
+            <div class="masticador-montage-grid">
+                <img src="assets (1)/assets/escarabajo cavador.png" alt="Escarabajo Excavador" class="montage-img">
+                <img src="assets (1)/assets/golem.png" alt="Golem de Cristal" class="montage-img">
+                <img src="assets (1)/assets/masticador_side_passing_1.png" alt="Masticador Común" class="montage-img">
+                <img src="assets (1)/assets/ghost.png" alt="Ghost" class="montage-img">
+            </div>
+            <h4>PLAGAS CENTRALES</h4>
+            <p class="tooltip-text">Masticadores, Golems, Escarabajos y Ghost componen las 4 oleadas iniciales.</p>
+            <button class="btn-modal">Ver Tipos y Debilidades</button>
+        </div>
+
+        <div class="threat-card scroll-trigger">
+            <img src="assets (1)/assets/Morgo org.png" alt="Morgo y sus honguitos tóxicos" class="threat-img">
+            <h4>JEFE FINAL: MORGO</h4>
+            <p class="tooltip-text">La fuente de la corrupción fúngica, protegido por sus honguitos tóxicos.</p>
+            <button class="btn-modal">Enfrentamiento Final</button>
+        </div>
+        
+    </div>
+    
+    <div class="hud-info scroll-trigger">
+        <h4>SISTEMAS DE INTERACCIÓN Y ACCESIBILIDAD</h4>
+        <p>El diseño optimizado para baja carga cognitiva incluye un HUD informativo (Vida, Hojas, Oleada), respuesta inmediata al toque y elementos de accesibilidad como modo de alto contraste.</p>
+    </div>
+</section>
+        </div>
+        
+
+<section class="multimedia" id="media">
+    
+    <h3 class="section-title scroll-trigger">VISTAZO AL JUEGO (TOP-DOWN)</h3>
+    
+    <div class="video-container scroll-trigger">
+        
+<iframe 
+    src="https://www.youtube.com/embed/hhPPyK1eyRk?start=6&autoplay=0&controls=1&modestbranding=1" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+       
+    </div>
+</section>
+
+    <footer class="credits" id="credits">
+        <div class="footer-grid">
+            <div class="credit-info scroll-trigger">
+                <h4>👥 EQUIPO DE DESARROLLO</h4>
+                <ul>
+                    <li>Allison Michelle Rodríguez Valencia</li>
+                    <li>Paola Yurani Rodríguez Morales</li>
+                    <li>Marlon Andersson Benavides Palacios</li>
+                </ul>
+                <p class="lore-intro scroll-trigger" style="margin-top: 20px;">Plataforma/Motor: PC/WebGL desarrollado en Unity 2D (Top-down).</p>
+            </div>
+            
+            <div class="credit-doc scroll-trigger">
+                <h4>📜 DOCUMENTACIÓN DEL PROCESO</h4>
+                <p>El proceso iterativo permitió la migración de Scratch a Unity para optimizar la usabilidad, la interfaz y la implementación de las mecánicas específicas de defensa y recolección.</p>
+                <a href="[ENLACE DOCUMENTO FASE 2]" class="btn-doc">Fase 2: Prototipo Funcional</a>
+                <a href="[ENLACE DOCUMENTO FASE 3]" class="btn-doc" style="margin-top: 5px;">Fase 3: Demo Mejorada</a>
+            </div>
+        </div>
+
+        <h3 class="footer-cta scroll-trigger">¿LISTO PARA PROTEGER EL BOSQUE MÁGICO?</h3>
+        <a href="[ENLACE A LA DEMO JUGABLE]" class="btn-cta glow-on-hover footer-btn">
+            ¡COMIENZA TU DEFENSA AHORA!
+        </a>
+        
+        <p class="copyright">Derechos Reservados © GRUMBLE - El Bosque del Nomo</p>
+    </footer>
+
+</body>
+</html>
